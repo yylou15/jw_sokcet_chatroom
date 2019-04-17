@@ -1,0 +1,45 @@
+extends layout/layout
+
+block head
+    nav.navbar.navbar-default(role='navigation')
+        .container-fluid
+            .navbar-header
+                //a.navbar-brand(href='#') 铁一504の激💗情💗聊💗天💗室
+            ul.nav.navbar-nav.navbar-right
+                li
+                    a(href='#')
+                        span
+                        | 欢迎,
+                        span#username #{ username }
+                li
+                    a(href='/login')
+                        span
+                        | 退出
+
+block content
+    .container
+        .row.myRow
+            .col-md-8.col-xs-12.myCol
+                .scroll-screen#barrager-screen
+                    .video-wrapper
+                        video.myVideo(id='my-video' class='video-js' preload='true' autoplay='true'
+                         data-setup='{}')
+                            source(src='http://csuvideotest.oss-cn-shenzhen.aliyuncs.com/66825179.mp4' type='video/mp4')
+            .col-md-4.col-xs-12.myCol
+                .msg-panel
+                    .panel-caption Google年度视频2018😳
+                    #scroll-text
+                        //.someone-enter-item 吴亦凡进入了直播间
+                        //.someone-enter-item 吴亦凡进入了直播间
+                        //.someone-enter-item 吴亦凡进入了直播间
+                        //.someone-enter-item 吴亦凡进入了直播间
+                        //.barrage-item 吴亦凡进入了直播间吴亦凡进入了直播间吴亦凡进入了直播间吴亦凡进入了直播间吴亦凡进入了直播间吴亦凡进入了直播间吴亦凡进入了直播间
+                        //.barrage-item 111
+                        //.barrage-item 111
+                        //.barrage-item 111
+                    #msg_end(style="height:0px; overflow:hidden")
+                    .send-msg
+                                input.form-control.send-msg-input(placeholder='输入内容，最长不超过20字...' maxlength=20)
+                                .btn.btn-info.send-msg-button
+                                    img(src='/images/send.png').send-msg-img
+

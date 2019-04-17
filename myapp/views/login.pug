@@ -1,0 +1,27 @@
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel='stylesheet', href='https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css')
+        script(src='https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js')
+        script(src='https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js')
+    body.login-body
+        .login-content-wrapper
+            .page-header
+                h1 登录
+                //small 铁一504の激💗情💗聊💗天💗室
+            form.form-horizontal(role='form' method='post' action='/login')
+                .col-sm-12.margin-top-20
+                    .form-group
+                        label.col-sm-3.control-label(for='name') 名称
+                        .col-sm-9
+                            input.form-control#name(type="text" placeholder="请输入姓名" name='username' required='true')
+
+                    //.form-group
+                    //    label.col-sm-3.control-label(for='pwd') 密码
+                    //    .col-sm-9
+                    //        input.form-control#pwd(type="password" placeholder="请输入密码,默认123456" name='pwd' required='true')
+                .formgroup
+                    .col-sm-12
+                        button.btn.btn-primary.btn-lg.btn-block.margin-top-20(type='submit') GO!
